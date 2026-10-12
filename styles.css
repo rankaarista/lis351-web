@@ -1,0 +1,424 @@
+/* styles.css
+   A4: Intro CSS Fill-in Template, completed A-O.
+   Madison Weekend Walks: lake green, blue accents, and local photographs.
+*/
+
+
+
+
+
+/* ===== Base styles (mostly done) ===== */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #173b34;
+  background: #fff;
+}
+
+a { color: inherit; text-decoration: none; }
+a:hover { text-decoration: underline; }
+a:focus-visible { outline: 3px solid #287b9b; outline-offset: 5px; }
+img { display: block; max-width: 100%; height: auto; }
+section { scroll-margin-top: 24px; }
+
+.container {
+  width: min(1000px, 92%);
+  margin: 0 auto;
+}
+
+/* ===== Header ===== */
+.site-header {
+  border-bottom: 1px solid #b8d5cd;
+  background: #fff;
+}
+
+.header-inner {
+  /* Completed A (Flexbox):
+     Make the brand appear on the left and the navigation on the right.
+     Requirements:
+       - Use flexbox
+       - Center items vertically
+       - Put space between left and right
+  */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 22px 0;
+}
+
+.brand {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.brand .dot {
+  /* Completed B (Color):
+     Make the dot a light blue accent color (choose a readable blue).
+  */
+  color: #287b9b;
+}
+
+.site-nav { display: flex; flex-wrap: wrap; gap: 18px; }
+
+.site-nav a {
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  color: #173b34;
+}
+
+
+
+
+
+
+/* ===== Hero ===== */
+.hero {
+  /* Completed C (Background image hero):
+     Turn this into a hero banner with a background image.
+     Requirements:
+       - Use a background image URL (use the one below)
+       - Make it cover the area and center it
+       - Add a light overlay so text is readable (hint: use a linear-gradient + image)
+       - Set a minimum height (e.g., 360px)
+  */
+  background-image: linear-gradient(rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.60)), url("images/madison-aerial.jpg");
+  background-size: cover;
+  background-position: center bottom;
+  min-height: 360px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  /* Completed D (Center content):
+     Center the hero text horizontally.
+     Add vertical padding so it doesn't feel cramped.
+  */
+  text-align: center;
+  padding: 72px 0;
+}
+
+.hero h1 {
+  margin: 0;
+  /* Completed E (Typography):
+     Make the headline large and uppercase.
+     (e.g., font-size around 42–48px, text-transform uppercase)
+  */
+  font-size: 46px;
+  line-height: 1.15;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  color: #173b34;
+}
+
+.hero-subhead {
+  margin: 6px 0 22px;
+  /* Completed F (Typography):
+     Make this slightly smaller than h1 and a softer color.
+     (e.g., font-size ~20–24px; color #555)
+  */
+  font-size: 22px;
+  color: #405b55;
+  max-width: 650px;
+  margin: 16px auto 26px;
+}
+
+
+
+
+
+
+/* ===== Buttons ===== */
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.btn-dark {
+  /* Completed G (Button styling):
+     Make this a dark filled button with white text.
+     (e.g., background #333; color #fff)
+  */
+  background: #0b5d4b;
+  color: #fff;
+  border: 2px solid #0b5d4b;
+}
+
+.btn-dark:hover { background: #173b34; border-color: #173b34; text-decoration: none; }
+
+.btn-outline {
+  /* Completed H (Button styling):
+     Make this an outlined button with a blue border and matching text.
+     (e.g., border: 2px solid ...; color: ...; background: transparent)
+  */
+  border: 2px solid #287b9b;
+  color: #246b87;
+  background: transparent;
+}
+
+.btn-outline:hover { background: #e8f4fa; text-decoration: none; }
+
+/* ===== Features (3 columns) ===== */
+.features {
+  padding: 48px 0;
+}
+
+.features-grid {
+  /* Completed I (Layout):
+     Arrange the three feature blocks in a row (desktop).
+     Requirements:
+       - Use flexbox
+       - Add a gap between items (e.g., 26px)
+  */
+  display: flex;
+  gap: 26px;
+  margin-top: 30px;
+}
+
+.feature {
+  /* Completed J (Sizing / alignment):
+     Make each feature take equal width and center its text.
+  */
+  flex: 1;
+  min-width: 0;
+  text-align: center;
+}
+
+.feature h3 { margin: 0 0 8px; font-size: 18px; }
+.feature p { margin: 0; color: #405b55; }
+
+.icon {
+  width: 56px;
+  height: 56px;
+  border: 2px solid #b8d5cd;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 12px;
+  color: #0b5d4b;
+  font-size: 22px;
+}
+
+/* ===== Featured content ===== */
+.featured {
+  padding: 42px 0 36px;
+  background: #eff6f3;
+}
+
+.section-title {
+  text-align: center;
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.section-lede {
+  text-align: center;
+  max-width: 680px;
+  margin: 10px auto 22px;
+  color: #405b55;
+  font-size: 16px;
+}
+
+.media {
+  background: #e4eeea;
+  border: 1px solid #b8d5cd;
+  margin: 0;
+  height: 260px;
+  overflow: hidden;
+}
+
+.media img { width: 100%; height: 100%; object-fit: cover; object-position: center 66%; }
+.featured-link { margin: 20px 0 0; text-align: center; }
+.featured-link a { color: #0b5d4b; text-decoration: underline; }
+
+
+
+
+
+
+/* ===== Secondary content (2 cards) ===== */
+.secondary {
+  padding: 34px 0 44px;
+}
+
+.secondary-grid {
+  /* Completed K (Layout):
+     Put the two cards next to each other on desktop.
+     Requirements:
+       - Use flexbox
+       - Add a gap (e.g., 26px)
+  */
+  display: flex;
+  gap: 26px;
+  margin-top: 28px;
+}
+
+.card {
+  /* Completed L (Card styling):
+     Give each card a border and make it take equal width.
+     (Hint: flex: 1; border: 1px solid #eee)
+  */
+  flex: 1;
+  min-width: 0;
+  border: 1px solid #b8d5cd;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+}
+
+.card-text {
+  padding: 22px;
+}
+
+.card-text h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.card-text p {
+  margin: 0 0 14px;
+  color: #405b55;
+  font-size: 16px;
+}
+
+.card-image {
+  min-height: 160px;
+  /* Completed M (Image block):
+     Make the card image behave like a background image:
+       - cover
+       - centered
+  */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Reuse the A3 photograph to keep the page local and self-contained. */
+.img-a {
+  background-image: url("images/madison-aerial.jpg");
+  background-position: 51% bottom;
+}
+.img-b {
+  background-image: url("images/madison-aerial.jpg");
+  background-position: 85% bottom;
+}
+
+.packing-list { margin-top: 28px; padding-top: 22px; border-top: 1px solid #b8d5cd; }
+.packing-list h3 { font-size: 16px; margin: 0 0 8px; }
+.packing-list ul { display: flex; flex-wrap: wrap; gap: 12px 36px; padding-left: 20px; margin: 0; color: #405b55; }
+
+/* ===== CTA ===== */
+.cta {
+  background: #eff6f3;
+  padding: 42px 0;
+}
+
+.cta-inner {
+  /* Completed N (Center CTA):
+     Center the CTA text and button.
+  */
+  text-align: center;
+}
+
+.cta h2 { font-size: 28px; margin: 0 0 8px; }
+.cta p { color: #405b55; margin: 0 0 22px; }
+
+
+
+
+
+/* ===== Footer ===== */
+.site-footer {
+  background: #fff;
+  border-top: 1px solid #b8d5cd;
+  padding: 24px 0;
+}
+
+.footer-inner {
+  /* Completed O (Footer layout):
+     Arrange footer-left on the left and footer link columns on the right.
+     Requirements:
+       - Use flexbox
+       - Add a gap (e.g., 24px)
+       - Space items out (left/right)
+  */
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-left {
+  max-width: 360px;
+  color: #405b55;
+  font-size: 14px;
+}
+
+.footer-left p { margin: 0 0 12px; }
+.footer-left a { color: #246b87; text-decoration: underline; }
+
+.footer-cols {
+  display: flex;
+  gap: 28px;
+}
+
+.footer-col h3 {
+  margin: 0 0 8px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.footer-col a {
+  display: block;
+  font-size: 14px;
+  color: #405b55;
+  margin: 6px 0;
+}
+
+/* Basic keyboard accessibility and responsive layout. */
+.skip-link {
+  position: absolute;
+  top: -80px;
+  left: 16px;
+  background: #173b34;
+  color: #fff;
+  padding: 12px 18px;
+  z-index: 10;
+}
+.skip-link:focus { top: 8px; }
+
+@media (max-width: 760px) {
+  .header-inner { flex-direction: column; gap: 16px; }
+  .site-nav { justify-content: center; gap: 12px 20px; }
+  .hero h1 { font-size: 34px; }
+  .hero-subhead { font-size: 20px; }
+  .hero-content { padding: 58px 0; }
+  .features-grid, .secondary-grid { flex-direction: column; }
+  .features-grid { gap: 32px; }
+  .feature { max-width: 500px; margin: 0 auto; }
+  .footer-inner { flex-direction: column; }
+}
+
+@media (max-width: 420px) {
+  .hero h1 { font-size: 28px; }
+  .brand { font-size: 26px; }
+  .card { grid-template-columns: 1fr; }
+  .card-image { min-height: 160px; }
+  .footer-cols { flex-wrap: wrap; gap: 24px; }
+}
+
